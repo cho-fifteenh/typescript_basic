@@ -1,12 +1,18 @@
 import React from 'react';
-import Greeting from '../componenets/Greeting';
+import Counter from '../componenets/Counter';
+
+// import Greeting from '../componenets/Greeting';
+
+// const Root: React.FC = () => {
+//   const onClick = (name: string) => {
+//     console.log(`${name} say hello`);
+//   };
+
+//   return <Greeting name="hello" onClick={onClick} />;
+// };
 
 const Root: React.FC = () => {
-  const onClick = (name: string) => {
-    console.log(`${name} say hello`);
-  };
-
-  return <Greeting name="hello" onClick={onClick} />;
+  return <Counter />;
 };
 
 export default Root;
