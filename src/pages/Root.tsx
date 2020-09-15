@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from '../componenets/Counter';
+import Practice from '../componenets/Practice';
 
 // import Greeting from '../componenets/Greeting';
 
@@ -12,7 +12,7 @@ import Counter from '../componenets/Counter';
 // };
 
 const Root: React.FC = () => {
-  return <Counter />;
+  return <Practice />;
 };
 
 export default Root;
