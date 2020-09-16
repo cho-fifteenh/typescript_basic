@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import styled from '@emotion/styled';
 import InputCom from '../componenets/InputCom';
-import Button from '../componenets/Button';
+// import Button1 from '../componenets/Button1';
+import Button2 from '../componenets/Button2';
 import CheckBox from './CheckBox';
 
 const Practice = () => {
   return (
     <Container>
       <form>
-        <InputCom />
-        <Button />
-        <CheckBox />
+        <InputCom placeholder="비밀번호를 입력해주세요!!!" />
+        {/* <Button1 buttonText="버튼"></Button1> */}
+        <Button2 btnStyle="black">솨솨솨</Button2>
+        <Button2>뫄뫄뫄</Button2>
+        <CheckBox name="checkBox1" id="test" />
       </form>
     </Container>
   );

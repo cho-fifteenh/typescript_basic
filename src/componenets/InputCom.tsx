@@ -1,18 +1,45 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
-const InputCom = () => {
+interface InputType {
+  placeholder: string;
+}
+
+const InputCom = ({ placeholder }: InputType) => {
+  const [passwordShow, setPasswordShow]: any = useState(false);
+  const [inputText, setInputText]: any = useState();
+
+  const passwordToggle = () => {
+    setPasswordShow(passwordShow ? false : true);
+  };
+  const onChangeInput = (e: any) => {
+    setInputText(e.target.value);
+  };
+  const passwordReset = () => {
+    setInputText('');
+  };
+
   return (
     <InputBox>
       <InputTitle>비밀번호</InputTitle>
-      <Input placeholder="비밀번호를 입력하세요." type="password" />
+      <Input
+        placeholder={placeholder}
+        type={passwordShow ? 'text' : 'password'}
+        value={inputText || ''}
+        onChange={onChangeInput}
+      />
       <ImgBox>
         <img
           src={require('../assets/images/btn_x.png')}
+          alt="password reset"
           css={{ marginRight: '8px' }}
+          onClick={passwordReset}
         />
-        <img src={require('../assets/images/pw_view.png')} />
+        <img
+          src={require('../assets/images/pw_view.png')}
+          alt="password eye"
+          onClick={passwordToggle}
+        />
       </ImgBox>
     </InputBox>
   );
