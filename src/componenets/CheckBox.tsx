@@ -53,7 +53,7 @@ const Input = styled.input`
 const InputLabel = styled.label`
   width: 15px;
   height: 15px;
-  cusor: pointer;
+  cursor: pointer;
   background: url(${uncheck}) no-repeat;
   background-size: 100%;
   margin-right: 8px;

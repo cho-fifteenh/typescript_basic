@@ -7,11 +7,12 @@ interface ButtonInput {
   btnStyle?: string;
 }
 
-//내부에 style 넣음........
+//내부에 style 넣음........?
 const Button2 = styled.button<ButtonInput>`
   margin-top: 10px;
   width: 100%;
   color: #fff;
+  cursor: pointer;
   font-weight: bold;
   background-color: #39718a;
   padding: 16px 0;
@@ -24,6 +25,13 @@ const Button2 = styled.button<ButtonInput>`
     btnStyle === 'black' &&
     css`
       background-color: #333;
+    `}
+  ${({ btnStyle }) =>
+    btnStyle === 'outline' &&
+    css`
+      background: none;
+      color: #39718a;
+      border: 1px solid #39718a;
     `}
 `;
 export default Button2;

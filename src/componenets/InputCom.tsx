@@ -15,6 +15,7 @@ const InputCom = ({ placeholder }: InputType) => {
   const onChangeInput = (e: any) => {
     setInputText(e.target.value);
   };
+
   const passwordReset = () => {
     setInputText('');
   };
@@ -28,7 +29,7 @@ const InputCom = ({ placeholder }: InputType) => {
         value={inputText || ''}
         onChange={onChangeInput}
       />
-      <ImgBox>
+      <ImgBox style={{ display: `${inputText ? 'block' : 'none'}` }}>
         <img
           src={require('../assets/images/btn_x.png')}
           alt="password reset"

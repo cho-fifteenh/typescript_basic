@@ -11,8 +11,9 @@ const Practice = () => {
       <form>
         <InputCom placeholder="비밀번호를 입력해주세요!!!" />
         {/* <Button1 buttonText="버튼"></Button1> */}
-        <Button2 btnStyle="black">솨솨솨</Button2>
-        <Button2>뫄뫄뫄</Button2>
+        <Button2 btnStyle="black">버튼 2-1</Button2>
+        <Button2>버튼 2-2</Button2>
+        <Button2 btnStyle="outline">버튼 2-3</Button2>
         <CheckBox name="checkBox1" id="test" />
       </form>
     </Container>
